@@ -5,6 +5,101 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Retrospectiva Poética - A Relatividade dos Encontros">
   <main class="relative bg-[#F5F2EB]">
+    <!-- CONTROLADOR DE ÁUDIO VINTAGE -->
+    <div class="fixed top-4 right-4 sm:top-6 sm:right-6 z-40 flex items-center gap-3 bg-[#F5F2EB]/95 text-[#2C3E2B] px-3.5 py-2 rounded-lg border border-[#2C3E2B]/15 shadow-md font-mono text-[11px] select-none backdrop-blur-sm hover:border-[#A65B43]/30 transition-colors">
+      <!-- Status e Onda Sonora -->
+      <button id="music-btn" class="flex items-center gap-2 hover:text-[#A65B43] focus:outline-none transition-colors cursor-pointer group">
+        <!-- Onda Sonora Animada -->
+        <div id="music-wave" class="flex items-end gap-[2px] h-3 w-3.5 pb-[1px]">
+          <div class="bar w-[2px] bg-[#2C3E2B] group-hover:bg-[#A65B43] h-1.5 rounded-sm transition-all duration-300 origin-bottom"></div>
+          <div class="bar w-[2px] bg-[#2C3E2B] group-hover:bg-[#A65B43] h-3 rounded-sm transition-all duration-300 origin-bottom"></div>
+          <div class="bar w-[2px] bg-[#2C3E2B] group-hover:bg-[#A65B43] h-2 rounded-sm transition-all duration-300 origin-bottom"></div>
+        </div>
+        <span id="music-state" class="font-bold tracking-wider">TOCAR MÚSICA</span>
+      </button>
+      
+      <span class="text-[#2C3E2B]/20">|</span>
+      
+      <!-- Controle de Volume -->
+      <div class="flex items-center gap-2">
+        <span class="text-[#2C3E2B]/50 text-[10px]">VOL</span>
+        <input 
+          type="range" 
+          id="music-vol" 
+          min="0" 
+          max="1" 
+          step="0.05" 
+          value="0.3" 
+          class="w-16 sm:w-20 h-1 bg-[#2C3E2B]/10 rounded-lg appearance-none cursor-pointer accent-[#A65B43] focus:outline-none"
+        />
+        <span id="music-vol-txt" class="text-[#2C3E2B]/70 min-w-[24px] text-right">30%</span>
+      </div>
+      
+      <!-- Elemento HTML de Áudio -->
+      <audio 
+        id="bg-music" 
+        src="/fotos/3%20X%204(MP3_320K).mp3" 
+        loop 
+        preload="auto"
+      ></audio>
+    </div>
+
+    <!-- ESTILOS DO CONTROLADOR DE ÁUDIO -->
+    <style>
+      /* Estilos para o slider de volume */
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background: rgba(44, 62, 43, 0.1);
+        height: 4px;
+        border-radius: 2px;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #A65B43;
+        cursor: pointer;
+        transition: transform 0.15s ease;
+      }
+      input[type="range"]::-webkit-slider-thumb:hover {
+        transform: scale(1.25);
+      }
+      input[type="range"]::-moz-range-thumb {
+        width: 10px;
+        height: 10px;
+        border: none;
+        border-radius: 50%;
+        background: #A65B43;
+        cursor: pointer;
+        transition: transform 0.15s ease;
+      }
+      input[type="range"]::-moz-range-thumb:hover {
+        transform: scale(1.25);
+      }
+
+      /* Animação das barras de onda sonora */
+      @keyframes bounce {
+        0%, 100% { transform: scaleY(0.3); }
+        50% { transform: scaleY(1); }
+      }
+      .music-wave-active .bar {
+        animation: bounce 0.8s ease-in-out infinite;
+      }
+      .music-wave-active .bar:nth-child(1) {
+        animation-duration: 0.7s;
+      }
+      .music-wave-active .bar:nth-child(2) {
+        animation-delay: 0.15s;
+        animation-duration: 0.9s;
+      }
+      .music-wave-active .bar:nth-child(3) {
+        animation-delay: 0.3s;
+        animation-duration: 0.8s;
+      }
+    </style>
     <!-- TEXTURA GLOBAL DE RUIDO VINTAGE -->
     <div
       class="fixed inset-0 pointer-events-none z-50 bg-[url('data:image/svg+xml,%3Csvg viewBox=\"
@@ -832,4 +927,73 @@ import Layout from "../layouts/Layout.astro";
 <script>
   // Importar o script de animações cliente
   import "../scripts/main.js";
+
+  // Lógica do Reprodutor de Áudio de Fundo
+  document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById('bg-music');
+    const btn = document.getElementById('music-btn');
+    const stateText = document.getElementById('music-state');
+    const wave = document.getElementById('music-wave');
+    const volInput = document.getElementById('music-vol');
+    const volTxt = document.getElementById('music-vol-txt');
+
+    if (!audio || !btn || !stateText || !wave || !volInput || !volTxt) return;
+
+    // Configurar volume inicial baseado no slider
+    audio.volume = parseFloat(volInput.value);
+
+    // Função para tocar a música
+    const playAudio = () => {
+      if (audio.paused) {
+        audio.play()
+          .then(() => {
+            stateText.textContent = "PAUSAR MÚSICA";
+            wave.classList.add('music-wave-active');
+          })
+          .catch(err => {
+            console.log("Autoplay bloqueado pelo navegador. Aguardando clique do usuário.");
+          });
+      }
+    };
+
+    // Função para pausar a música
+    const pauseAudio = () => {
+      audio.pause();
+      stateText.textContent = "TOCAR MÚSICA";
+      wave.classList.remove('music-wave-active');
+    };
+
+    // Alternar reprodução no clique do botão
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (audio.paused) {
+        playAudio();
+      } else {
+        pauseAudio();
+      }
+    });
+
+    // Controlar o volume pelo slider
+    volInput.addEventListener('input', (e) => {
+      const vol = parseFloat(e.target.value);
+      audio.volume = vol;
+      volTxt.textContent = Math.round(vol * 100) + "%";
+    });
+
+    // Iniciar a música automaticamente no primeiro clique/interação com o site
+    let autoPlayStarted = false;
+    const handleAutoplay = () => {
+      if (!autoPlayStarted) {
+        playAudio();
+        autoPlayStarted = true;
+        document.removeEventListener('click', handleAutoplay);
+        document.removeEventListener('scroll', handleAutoplay);
+        document.removeEventListener('touchstart', handleAutoplay);
+      }
+    };
+
+    document.addEventListener('click', handleAutoplay);
+    document.addEventListener('scroll', handleAutoplay, { passive: true });
+    document.addEventListener('touchstart', handleAutoplay, { passive: true });
+  });
 </script>
