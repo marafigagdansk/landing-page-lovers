@@ -1,0 +1,88 @@
+/* -------------------------------------------------------------
+   Estilos Globais no Astro com Tailwind CSS v4
+   ------------------------------------------------------------- */
+
+@import "tailwindcss";
+
+/* Configuração do Tema no Tailwind CSS v4 */
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-cursive: "Caveat", cursive;
+}
+
+/* Reset de scroll suave */
+html {
+  scroll-behavior: smooth;
+  /* Garante que o scroll no Windows seja o mais agradável possível */
+  scrollbar-width: thin;
+  scrollbar-color: #f43f5e #09090b; /* Rose-500 e Zinc-950 */
+}
+
+/* Customização da scrollbar do navegador */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b; /* bg-zinc-950 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a; /* bg-zinc-800 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f43f5e; /* bg-rose-500 */
+}
+
+/* Prevenção de FOUC (Flash of Unstyled Content) para elementos animados pelo GSAP */
+.js-anim-stagger-left,
+.js-anim-stagger-right,
+.js-anim-stagger-up,
+.js-anim-scale-up,
+.js-anim-spring,
+.js-anim-parallax-img,
+.js-anim-parallax-text {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Efeito sutil de textura/ruído analógico de fundo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Imagem em base64 com ruído cinza sutil */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Estilização para o efeito de revelação de texto (Text Reveal) no Hero */
+.char-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.char-item {
+  display: inline-block;
+  transform: translateY(105%);
+  will-change: transform;
+}
+
+/* Estilo do Polaroid - Detalhes adicionais de textura de papel fotográfico */
+.bg-zinc-900 {
+  background-image: linear-gradient(to bottom, #18181b, #111113);
+}
+
+/* Garante que o scroll horizontal seja fluido no Safari/iOS */
+#horizontal-scroll {
+  -webkit-overflow-scrolling: touch;
+}

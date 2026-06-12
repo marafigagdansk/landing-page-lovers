@@ -1,0 +1,835 @@
+---
+// Importar o Layout base
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Retrospectiva Poética - A Relatividade dos Encontros">
+  <main class="relative bg-[#F5F2EB]">
+    <!-- TEXTURA GLOBAL DE RUIDO VINTAGE -->
+    <div
+      class="fixed inset-0 pointer-events-none z-50 bg-[url('data:image/svg+xml,%3Csvg viewBox=\"
+      0
+      0
+      200
+      200\"
+      xmlns='\"http://www.w3.org/2000/svg\"%3E%3Cfilter'
+      id='\"noise\"%3E%3CfeTurbulence'
+      type='\"fractalNoise\"'
+      baseFrequency='\"0.8\"'
+      numOctaves='\"3\"'
+      stitchTiles='\"stitch\"/%3E%3C/filter%3E%3Crect'
+      width='\"100%25\"'
+      height='\"100%25\"'
+      filter='\"url(%23noise)\"'
+      opacity='\"0.02\"/%3E%3C/svg%3E&apos;)]"'
+    >
+    </div>
+
+    <!-- 1. HERO: A Teoria da Relatividade dos Encontros -->
+    <section
+      id="hero"
+      class="relative min-h-screen w-full flex flex-col justify-between items-center px-6 py-16 md:py-24 overflow-hidden bg-[#F5F2EB] border-b border-[#2C3E2B]/10"
+    >
+      <!-- Detalhe Estrutural Superior -->
+      <div
+        class="w-full max-w-7xl flex justify-between items-center text-xs font-mono text-[#2C3E2B]/60 tracking-wider"
+      >
+        <span>LOG_SYS: INICIALIZADO // STABLE_SYS</span>
+        <span>COORD: [4321_N_2026_E]</span>
+      </div>
+
+      <!-- Bloco de Texto Principal com a Fusão de Marisa Monte & Engenheiros do Hawaii -->
+      <div class="text-center z-10 max-w-5xl mx-auto my-auto py-12">
+        <!-- O título será animado letra por letra. O GSAP agrupará e alinhará no scroll -->
+        <h1
+          id="hero-title"
+          class="text-center font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-tight text-[#2C3E2B] tracking-tight max-w-4xl mx-auto italic"
+        >
+          Nesta infinita highway de acasos e direções erradas, deixo o tempo
+          passar e o loop continuar
+        </h1>
+
+        <p
+          id="hero-lead"
+          class="mt-8 text-[#2C3E2B]/70 font-mono text-xs md:text-sm tracking-wider max-w-2xl mx-auto opacity-0 translate-y-4"
+        >
+          // FUSÃO DE UNIVERSOS: SISTEMAS DE LÓGICA & VIDA BIOLÓGICA ORGÂNICA
+        </p>
+      </div>
+
+      <!-- Indicador de Scroll Poético -->
+      <div
+        id="hero-scroll-indicator"
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 font-mono text-[10px] text-[#2C3E2B]/40 tracking-widest uppercase cursor-pointer hover:text-[#A65B43] transition-colors z-20 opacity-0 translate-y-4"
+      >
+        <span>Iniciar Compilação Visual</span>
+        <div class="w-[1px] h-12 bg-[#2C3E2B]/30 relative overflow-hidden mt-1">
+          <div
+            class="absolute top-0 left-0 w-full h-1/2 bg-[#A65B43] animate-ping"
+          >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SEÇÃO 1: Sistemas Vivos & Algoritmos Afetivos (Grid Assimétrico Dev + Vet) -->
+    <section
+      id="secao1"
+      class="relative py-32 md:py-48 px-6 max-w-7xl mx-auto bg-[#F5F2EB]"
+    >
+      <!-- Detalhes de Guia Visual (Grades) -->
+      <div
+        class="absolute top-0 left-8 w-px h-full bg-[#2C3E2B]/5 pointer-events-none"
+      >
+      </div>
+      <div
+        class="absolute top-0 right-8 w-px h-full bg-[#2C3E2B]/5 pointer-events-none"
+      >
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <!-- Lado Esquerdo (IDE de Código Retrô e Lógica) -->
+        <div class="lg:col-span-5 space-y-8">
+          <div class="mb-10">
+            <span class="font-mono text-xs text-[#A65B43] block mb-2"
+              >// 01_SISTEMA_LOGICO</span
+            >
+            <h2
+              class="font-serif text-3xl md:text-5xl font-light text-[#2C3E2B]"
+            >
+              Meu loop eterno favorito: Explicar Você
+            </h2>
+          </div>
+
+          <!-- Janela do Editor de Código Vintage -->
+          <div
+            class="bg-[#2C3E2B] text-[#F5F2EB]/90 rounded-md border border-[#2C3E2B] shadow-2xl p-6 font-mono text-xs md:text-sm leading-relaxed overflow-hidden relative group"
+          >
+            <div
+              class="flex items-center gap-2 border-b border-[#F5F2EB]/10 pb-4 mb-4 text-[#F5F2EB]/40 justify-between"
+            >
+              <div class="flex gap-1.5">
+                <span class="w-3 h-3 rounded-full bg-[#A65B43]/60"></span>
+                <span class="w-3 h-3 rounded-full bg-[#F5F2EB]/20"></span>
+                <span class="w-3 h-3 rounded-full bg-[#2C3E2B]/80"></span>
+              </div>
+              <span class="text-[10px] tracking-wider uppercase font-mono"
+                >ela_compiler.rs</span
+              >
+            </div>
+
+            <!-- Código Poético Simulado -->
+            <div class="space-y-1">
+              <p class="font-mono">
+                <span class="text-[#A65B43] font-mono">fn</span>
+                <span class="text-[#F5F2EB]/90 font-mono"
+                  >processar_sentimento</span
+                >(ela: <span class="text-[#3B5866] font-mono">MedVet</span>,
+                ele: <span class="text-[#3B5866] font-mono">DevDev</span>)
+                &#123;
+              </p>
+              <p class="font-mono">
+                &nbsp;&nbsp;<span class="text-[#A65B43] font-mono">let mut</span
+                > tentativa = <span class="text-[#3B5866] font-mono">0</span>;
+              </p>
+              <p class="font-mono">&nbsp;</p>
+              <p class="text-[#F5F2EB]/40 font-mono">
+                &nbsp;&nbsp;// Linha 05: Uma tentativa frustrada de prever o
+                imprevisível
+              </p>
+              <p class="font-mono">
+                &nbsp;&nbsp;<span class="text-[#A65B43] font-mono">loop</span> &#123;
+              </p>
+              <p class="font-mono">
+                &nbsp;&nbsp;&nbsp;&nbsp;tentativa += ela.<span
+                  class="text-[#F5F2EB]/60 font-mono">amor_recebido()</span
+                >;
+              </p>
+              <p class="font-mono">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              <p class="text-[#F5F2EB]/40 font-mono">
+                &nbsp;&nbsp;&nbsp;&nbsp;// Erro: Incalculável para o sistema
+              </p>
+              <p class="font-mono">
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#A65B43] font-mono"
+                  >if</span
+                > tentativa &gt; <span class="text-[#3B5866] font-mono"
+                  >usize::MAX</span
+                > &#123;
+              </p>
+              <p class="font-mono">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="text-[#A65B43] font-mono">panic!</span
+                >(<span class="text-[#A65B43]/80 font-mono"
+                  >"StackOverflow: Amor demais para o tamanho da minha lógica."</span
+                >);
+              </p>
+              <p class="font-mono">&nbsp;&nbsp;&nbsp;&nbsp;&#125;</p>
+              <p class="font-mono">&nbsp;&nbsp;&#125;</p>
+              <p class="font-mono">&#125;</p>
+            </div>
+            <div
+              class="absolute bottom-2 right-4 text-[10px] text-[#F5F2EB]/20 font-mono"
+            >
+              EOF
+            </div>
+          </div>
+
+          <!-- Terminal Retro com Mensagem de Erro (Panic do Rust) -->
+          <div
+            class="bg-[#18181b] text-[#ef4444] rounded-md border border-[#ef4444]/20 shadow-2xl p-6 font-mono text-xs md:text-sm leading-relaxed overflow-hidden relative group"
+          >
+            <div
+              class="flex items-center gap-2 border-b border-[#ef4444]/10 pb-4 mb-4 text-[#ef4444]/40 justify-between"
+            >
+              <div class="flex gap-1.5">
+                <span class="w-3 h-3 rounded-full bg-[#ef4444]/60"></span>
+                <span class="w-3 h-3 rounded-full bg-[#ef4444]/20"></span>
+                <span class="w-3 h-3 rounded-full bg-[#ef4444]/80"></span>
+              </div>
+              <span
+                class="text-[10px] tracking-wider uppercase font-mono text-[#ef4444]/80"
+                >terminal - ela_compiler</span
+              >
+            </div>
+
+            <div class="space-y-2 font-mono text-zinc-100">
+              <p class="text-zinc-500 font-mono">$ ./ela_compiler</p>
+              <p class="text-red-400 font-mono font-semibold">
+                thread 'main' panicked at 'StackOverflow: Amor demais para o
+                tamanho da minha lógica.', src/ela_compiler.rs:9:13
+              </p>
+              <p class="text-zinc-500 font-mono">
+                note: run with `RUST_BACKTRACE=1` environment variable to
+                display a backtrace
+              </p>
+              <p class="text-[#A65B43] font-mono animate-pulse mt-4">
+                // CRASHOU FOI TUDO: QUE LOKURAH LOKO!
+              </p>
+            </div>
+          </div>
+
+          <!-- A Frase Temática Consolidada de Dev + Vet -->
+          <p
+            class="text-[#2C3E2B] font-serif text-xl md:text-2xl leading-relaxed italic border-l-2 border-[#A65B43] pl-6 py-2"
+          >
+            "Eu só escrevo linhas retas de código numa tela fria, você estuda a
+            pulsação imperfeita dos corações vivos. Esse amor que você carrega
+            cura o que minha lógica insiste em tentar compilar."
+          </p>
+        </div>
+
+        <!-- Lado Direito (Grid Assimétrico de Fotos - 6 Placeholders) -->
+        <div class="lg:col-span-7 space-y-12">
+          <!-- Elementos Gráficos Orgânicos (SVG de Linhas de Batimento + Folhas) -->
+          <div
+            class="relative w-full h-32 opacity-20 pointer-events-none overflow-hidden"
+          >
+            <svg
+              class="absolute inset-0 w-full h-full"
+              fill="none"
+              viewBox="0 0 800 150"
+            >
+              <!-- Batimento cardíaco se transformando em folha -->
+              <path
+                class="svg-leaf-path"
+                stroke-width="1.5"
+                d="M10,75 L150,75 L170,40 L190,110 L210,50 L220,95 L230,75 L350,75 C380,45 430,20 480,40 C530,60 550,110 520,130 C490,140 440,120 410,90 C380,60 410,30 460,50"
+              ></path>
+            </svg>
+          </div>
+
+          <!-- O Grid Assimétrico de Imagens (FOTOS 01 a 06) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
+            <!-- FOTO 01: Polaroid 1:1 -->
+            <div class="js-anim-stagger-left flex justify-center">
+              <div
+                class="bg-[#F5F2EB] p-4 pb-8 rounded-sm shadow-xl border border-[#2C3E2B]/10 transform -rotate-2 hover:rotate-0 hover:scale-[1.03] transition-all duration-300 w-full max-w-xs group"
+              >
+                <div
+                  class="bg-[#2C3E2B]/5 aspect-square w-full rounded-sm flex flex-col items-center justify-center border border-[#2C3E2B]/10 relative overflow-hidden"
+                >
+                  <!-- Imagem Real da pasta public/fotos/ -->
+                  <img
+                    src="/fotos/foto 1.jpg"
+                    alt="A física da nossa atração"
+                    class="w-full h-full object-cover rounded-sm group-hover:scale-[1.03] transition-transform duration-500"
+                  />
+                  <div
+                    class="absolute inset-0 bg-[#A65B43]/0 group-hover:bg-[#A65B43]/5 transition-all duration-300 pointer-events-none"
+                  >
+                  </div>
+                </div>
+                <div
+                  class="mt-4 text-center font-cursive text-xl text-[#2C3E2B]/80 group-hover:text-[#2C3E2B] transition-colors"
+                >
+                  sei que vc não gosta dela, mas poh foi nossa primiera
+                  fotinha...
+                </div>
+              </div>
+            </div>
+
+            <!-- FOTO 02: Proporção 4:3 -->
+            <div class="js-anim-stagger-right">
+              <div
+                class="bg-[#F5F2EB] p-3 rounded-lg border border-[#2C3E2B]/10 shadow-lg hover:scale-[1.02] hover:border-[#2C3E2B]/30 transition-all duration-300 group"
+              >
+                <div
+                  class="bg-[#2C3E2B]/5 aspect-[4/3] w-full rounded-md flex items-center justify-center relative overflow-hidden"
+                >
+                  <!-- Imagem Real da pasta public/fotos/ -->
+                  <img
+                    src="/fotos/foto 2.jpg"
+                    alt="Primeiro registro"
+                    class="w-full h-full object-cover rounded-md group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                  <div
+                    class="absolute inset-0 bg-[#A65B43]/0 group-hover:bg-[#A65B43]/5 transition-all duration-300 pointer-events-none"
+                  >
+                  </div>
+                </div>
+                <p
+                  class="text-[10px] font-mono text-[#2C3E2B]/50 mt-2 text-right tracking-wider uppercase"
+                >
+                  // DATA_INDEX: PRIMEIRO_REGISTRO_DESCENTE
+                </p>
+              </div>
+            </div>
+
+            <!-- FOTO 03: Imagem (Lado Esquerdo) -->
+            <div class="js-anim-stagger-left">
+              <div
+                class="bg-[#F5F2EB] p-3 rounded-lg border border-[#2C3E2B]/10 shadow-lg hover:scale-[1.02] hover:border-[#2C3E2B]/30 transition-all duration-300 group"
+              >
+                <div
+                  class="bg-[#2C3E2B]/5 aspect-[4/5] w-full rounded-md flex items-center justify-center relative overflow-hidden"
+                >
+                  <!-- Imagem Real da pasta public/fotos/ -->
+                  <img
+                    src="/fotos/foto 3.jpg"
+                    alt="Conexão viva"
+                    class="w-full h-full object-cover rounded-md group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                  <div
+                    class="absolute inset-0 bg-[#A65B43]/0 group-hover:bg-[#A65B43]/5 transition-all duration-300 pointer-events-none"
+                  >
+                  </div>
+                </div>
+                <p
+                  class="text-[10px] font-mono text-[#2C3E2B]/50 mt-2 tracking-wider uppercase"
+                >
+                </p>
+              </div>
+            </div>
+
+            <!-- VÍDEO 01: Vídeo em Loop (Lado Direito) -->
+            <div class="js-anim-stagger-right">
+              <div
+                class="bg-[#F5F2EB] p-3 rounded-lg border border-[#2C3E2B]/10 shadow-lg hover:scale-[1.02] hover:border-[#2C3E2B]/30 transition-all duration-300 group"
+              >
+                <div
+                  class="bg-[#2C3E2B]/5 aspect-[4/5] w-full rounded-md flex items-center justify-center relative overflow-hidden border border-[#2C3E2B]/10"
+                >
+                  <!-- Vídeo Real em Loop Autoplay da pasta public/fotos/ -->
+                  <video
+                    src="/fotos/video 1.mp4"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    class="w-full h-full object-cover rounded-md group-hover:scale-[1.02] transition-transform duration-500"
+                  ></video>
+                  <div
+                    class="absolute inset-0 bg-[#A65B43]/0 group-hover:bg-[#A65B43]/5 transition-all duration-300 pointer-events-none"
+                  >
+                  </div>
+                </div>
+                <p
+                  class="text-[10px] font-mono text-[#2C3E2B]/50 mt-2 text-right tracking-wider uppercase"
+                >
+                  // LOOP_SYS: SORRISO_MAIS_LINDO
+                </p>
+              </div>
+            </div>
+
+            <!-- FOTO 04: Polaroid 1:1 -->
+            <div class="js-anim-stagger-left flex justify-center">
+              <div
+                class="bg-[#F5F2EB] p-4 pb-8 rounded-sm shadow-xl border border-[#2C3E2B]/10 transform rotate-3 hover:rotate-0 hover:scale-[1.03] transition-all duration-300 w-full max-w-xs group"
+              >
+                <div
+                  class="bg-[#2C3E2B]/5 aspect-square w-full rounded-sm flex flex-col items-center justify-center border border-[#2C3E2B]/10 relative overflow-hidden"
+                >
+                  <!-- Imagem Real da pasta public/fotos/ -->
+                  <img
+                    src="/fotos/foto 4.jpg"
+                    alt="O sopro de vida orgânica"
+                    class="w-full h-full object-cover rounded-sm group-hover:scale-[1.03] transition-transform duration-500"
+                  />
+                  <div
+                    class="absolute inset-0 bg-[#A65B43]/0 group-hover:bg-[#A65B43]/5 transition-all duration-300 pointer-events-none"
+                  >
+                  </div>
+                </div>
+                <div
+                  class="mt-4 text-center font-cursive text-xl text-[#2C3E2B]/80 group-hover:text-[#2C3E2B] transition-colors"
+                >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 3. SEÇÃO 2: Linhas Retas & Pulsações Imperfeitas (Com Transição Cromática) -->
+  <!-- Este container transita do verde-musgo profundo para o terracota no scroll -->
+  <section
+    id="secao2-container"
+    class="relative py-32 md:py-48 px-6 transition-colors duration-1000 bg-[#2C3E2B] text-[#F5F2EB] overflow-hidden"
+  >
+    <!-- Elementos Decorativos de Background (Vibe MedVet & Natureza) -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+      <!-- Traço de Batimento que vira Folha (Esquerda Superior) -->
+      <svg
+        class="absolute top-10 left-10 w-72 h-72 text-[#F5F2EB]/8 fill-none stroke-current"
+        stroke-width="0.3"
+        viewBox="0 0 100 100"
+      >
+        <path
+          d="M0,50 L20,50 L25,30 L30,70 L35,45 L38,55 L40,50 L55,50 C60,40 68,35 78,38 C83,40 88,48 83,55 C78,60 71,58 68,52 C65,46 69,38 75,42 M78,38 C80,32 85,28 90,32"
+        ></path>
+      </svg>
+      <!-- Estetoscópio Botânico / Patinha Raminho (Direita Inferior) -->
+      <svg
+        class="absolute bottom-10 right-10 w-96 h-96 text-[#F5F2EB]/8 fill-none stroke-current"
+        stroke-width="0.3"
+        viewBox="0 0 100 100"
+      >
+        <path
+          d="M15,80 C25,75 30,60 30,50 C30,38 35,28 42,28 C46,28 48,32 48,42 C48,52 52,62 62,62 C68,62 72,58 72,48 C72,32 82,22 88,32 C91,35 89,42 86,45 C80,52 78,68 88,78"
+        ></path>
+        <!-- Patinha sutil -->
+        <circle cx="42" cy="22" r="1.5" fill="currentColor" opacity="0.2"
+        ></circle>
+        <circle cx="48" cy="18" r="1.5" fill="currentColor" opacity="0.2"
+        ></circle>
+        <circle cx="54" cy="22" r="1.5" fill="currentColor" opacity="0.2"
+        ></circle>
+        <path
+          d="M48,25 C46,25 44,26 44,28 C44,30 46,31 48,31 C50,31 52,30 52,28 C52,26 50,25 48,25 Z"
+          fill="currentColor"
+          opacity="0.2"></path>
+      </svg>
+
+      <!-- Gatinho Fofo de Orelhas Pontudas Espiando (Lateral Direita Superior) -->
+      <svg
+        class="absolute top-28 right-12 w-32 h-32 text-[#F5F2EB]/10 fill-none stroke-current"
+        stroke-width="0.5"
+        viewBox="0 0 24 24"
+      >
+        <!-- Contorno da cabeça/bochechas espiando -->
+        <path
+          d="M5,12 C5,9.5 7,8 12,8 C17,8 19,9.5 19,12 C19,14.5 17.5,16.5 17,17.5 C15.5,19 13.5,19.5 12,19.5 C10.5,19.5 8.5,19 7,17.5 C6,16.5 5,14.5 5,12 Z"
+        ></path>
+        <!-- Orelhas pontudas de gato para cima -->
+        <path d="M6.5,8.5 L5,3 L9,6.5"></path>
+        <path d="M17.5,8.5 L19,3 L15,6.5"></path>
+        <!-- Narizinho pequeno triangular de gato -->
+        <path d="M11.7,13.5 L12.3,13.5 L12,14 Z" fill="currentColor"></path>
+        <!-- Boca de gatinho (sorrisinho de âncora) -->
+        <path d="M10.5,14.8 C11,15.3 12,15.3 12,14.5 C12,15.3 13,15.3 13.5,14.8"
+        ></path>
+        <!-- Bigodes finos e fofos -->
+        <path d="M4.5,13.5 L2,13 M4.5,14.5 L1.5,14.5 M4.5,15.5 L2,16"></path>
+        <path d="M19.5,13.5 L22,13 M19.5,14.5 L22.5,14.5 M19.5,15.5 L22,16"
+        ></path>
+      </svg>
+
+      <!-- Cachorrinho Fofo de Orelha Caída Espiando (Lateral Esquerda Inferior) -->
+      <svg
+        class="absolute bottom-28 left-8 w-32 h-32 text-[#F5F2EB]/10 fill-none stroke-current"
+        stroke-width="0.5"
+        viewBox="0 0 24 24"
+      >
+        <!-- Contorno do focinho e cabeça -->
+        <path
+          d="M5,10 C5,7.5 7,6 12,6 C17,6 19,7.5 19,10 C19,13 18,15 17,16.5 C15.5,18 13.5,18.5 12,18.5 C10.5,18.5 8.5,18 7,16.5 C6,15 5,13 5,10 Z"
+        ></path>
+        <!-- Orelhas caídas fofas -->
+        <path d="M5.2,7.5 C4.2,8.5 3.5,10.5 3.8,12 C4,13 5.2,12.5 5.5,11"
+        ></path>
+        <path d="M18.8,7.5 C19.8,8.5 20.5,10.5 20.2,12 C20,13 18.8,12.5 18.5,11"
+        ></path>
+        <!-- Narizinho em formato de coração -->
+        <path
+          d="M11,12.5 L13,12.5 C13.5,12.5 13.5,13.2 13,13.6 L12,14.5 L11,13.6 C10.5,13.2 10.5,12.5 11,12.5 Z"
+          fill="currentColor"></path>
+      </svg>
+
+      <!-- Patinhas (pegadas) caminhando em diagonal (Centro/Fundo) -->
+      <div
+        class="absolute top-1/2 left-1/3 opacity-[0.08] text-[#F5F2EB] flex flex-col gap-16 transform -rotate-12 pointer-events-none"
+      >
+        <!-- Patinha 1 -->
+        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+          <circle cx="8" cy="8" r="1.8"></circle><circle
+            cx="12"
+            cy="5.2"
+            r="1.8"></circle><circle cx="16" cy="8" r="1.8"></circle>
+          <path
+            d="M12,10.5 C9.5,10.5 8,12.2 8,14.8 C8,17.2 9.8,19 12,19 C14.2,19 16,17.2 16,14.8 C16,12.2 14.5,10.5 12,10.5 Z"
+          ></path>
+        </svg>
+        <!-- Patinha 2 (Deslocada) -->
+        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current ml-10">
+          <circle cx="8" cy="8" r="1.8"></circle><circle
+            cx="12"
+            cy="5.2"
+            r="1.8"></circle><circle cx="16" cy="8" r="1.8"></circle>
+          <path
+            d="M12,10.5 C9.5,10.5 8,12.2 8,14.8 C8,17.2 9.8,19 12,19 C14.2,19 16,17.2 16,14.8 C16,12.2 14.5,10.5 12,10.5 Z"
+          ></path>
+        </svg>
+        <!-- Patinha 3 -->
+        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current ml-20">
+          <circle cx="8" cy="8" r="1.8"></circle><circle
+            cx="12"
+            cy="5.2"
+            r="1.8"></circle><circle cx="16" cy="8" r="1.8"></circle>
+          <path
+            d="M12,10.5 C9.5,10.5 8,12.2 8,14.8 C8,17.2 9.8,19 12,19 C14.2,19 16,17.2 16,14.8 C16,12.2 14.5,10.5 12,10.5 Z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <!-- Cabeçalho da Seção -->
+      <div class="mb-24 md:mb-36 max-w-3xl">
+        <span
+          class="font-mono text-xs text-[#A65B43] tracking-widest block mb-2"
+          >// 02_RETILINEO_E_ORGANICO</span
+        >
+        <h2
+          class="font-serif text-3xl md:text-5xl lg:text-6xl font-light tracking-tight"
+        >
+          Semiologia &amp; Homeostase
+        </h2>
+
+        <p
+          class="font-serif text-lg md:text-xl text-[#F5F2EB]/90 italic mt-6 leading-relaxed"
+        >
+          "Eu busco constantes, loops previsíveis e portas lógicas estruturadas
+          no terminal de comandos. Você decifra a semiologia da vida, o ritmo
+          dinâmico do sopro cardíaco e a homeostase que mantém o caos em
+          silêncio. Encontramos nosso equilíbrio no atrito dessas duas
+          realidades."
+        </p>
+      </div>
+
+      <!-- Layout da Dualidade: Código Reto (Dev) vs. Pulsação Cardíaca (Vet) - 6 Placeholders (FOTOS 07 a 12) -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-start"
+      >
+        <!-- LADO DEV - FOTO 07: Linha Reta (Ângulo de 90° e Estrutura Seca) -->
+        <div class="js-anim-heartbeat-reveal space-y-4">
+          <div
+            class="bg-[#3B4D3C] p-4 rounded-2xl border border-[#F5F2EB]/15 shadow-xl group"
+          >
+            <div
+              class="bg-[#F5F2EB]/5 aspect-[4/3] w-full rounded-xl flex items-center justify-center relative overflow-hidden border border-[#F5F2EB]/15"
+            >
+              <!-- Imagem Real da pasta public/fotos/ -->
+              <img
+                src="/fotos/foto 7.jpg"
+                alt="Constante sistema"
+                class="w-full h-full object-cover rounded-xl group-hover:scale-[1.03] transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-[#A65B43]/0 group-hover:bg-[#A65B43]/5 transition-all duration-300 pointer-events-none"
+              >
+              </div>
+            </div>
+          </div>
+          <p class="font-mono text-[10px] text-[#F5F2EB]/40 tracking-wider">
+            // LÓGICA: CONSTANTE_SISTEMA
+          </p>
+        </div>
+
+        <!-- LADO VET - FOTO 08: Pulsação (Batimento Cardíaco / Efeito de Escala Orgânica) -->
+        <div class="js-anim-heartbeat-reveal space-y-4">
+          <div
+            class="bg-[#3B4D3C] p-4 pb-8 rounded-2xl shadow-2xl border border-[#F5F2EB]/15 transform rotate-2 group"
+          >
+            <div
+              class="bg-[#F5F2EB]/5 aspect-[4/5] w-full rounded-xl flex items-center justify-center relative overflow-hidden border border-[#F5F2EB]/15"
+            >
+              <!-- Imagem Real da pasta public/fotos/ -->
+              <img
+                src="/fotos/foto 8.jpg"
+                alt="Ritmo da pulsação viva"
+                class="w-full h-full object-cover rounded-xl group-hover:scale-[1.03] transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-[#A65B43]/0 group-hover:bg-[#A65B43]/5 transition-all duration-300 pointer-events-none"
+              >
+              </div>
+            </div>
+            <div
+              class="mt-4 text-center font-cursive text-xl text-[#F5F2EB]/70 flex items-center justify-center"
+            >
+              Ritmo da pulsação viva.
+              <!-- Ícone sutil de Patinha de Animal ao lado do texto -->
+              <svg
+                viewBox="0 0 24 24"
+                class="w-4 h-4 fill-current text-[#A65B43] ml-2 opacity-80"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="8" cy="8" r="2"></circle><circle
+                  cx="12"
+                  cy="5"
+                  r="2"></circle><circle cx="16" cy="8" r="2"></circle>
+                <path
+                  d="M12,10 C9,10 7,12 7,15 C7,18 9,20 12,20 C15,20 17,18 17,15 C17,12 15,10 12,10 Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <p class="font-mono text-[10px] text-[#F5F2EB]/40 tracking-wider">
+            // BIOLOGIA: CICLO_CARDIACO
+          </p>
+        </div>
+
+        <!-- LADO DEV - FOTO 09: Linha Reta -->
+        <div class="js-anim-rectilinear space-y-4 lg:mt-36 md:mt-24">
+          <div
+            class="bg-[#3B4D3C] p-4 rounded-2xl border border-[#F5F2EB]/15 shadow-xl group"
+          >
+            <div
+              class="bg-[#F5F2EB]/5 aspect-[4/5] w-full rounded-xl flex items-center justify-center relative overflow-hidden border border-[#F5F2EB]/15"
+            >
+              <!-- Imagem Real da pasta public/fotos/ -->
+              <img
+                src="/fotos/foto 9.jpg"
+                alt="Fluxo condicional"
+                class="w-full h-full object-cover rounded-xl group-hover:scale-[1.03] transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-[#A65B43]/0 group-hover:bg-[#A65B43]/5 transition-all duration-300 pointer-events-none"
+              >
+              </div>
+            </div>
+          </div>
+          <p class="font-mono text-[10px] text-[#F5F2EB]/40 tracking-wider">
+            // LÓGICA: FLUXO_CONDICIONAL
+          </p>
+        </div>
+
+        <!-- LADO VET - FOTO 10: Pulsação -->
+        <div class="js-anim-heartbeat-reveal space-y-4">
+          <div
+            class="bg-[#3B4D3C] p-4 rounded-2xl border border-[#F5F2EB]/15 shadow-2xl group"
+          >
+            <div
+              class="bg-[#F5F2EB]/5 aspect-[16/9] w-full rounded-xl flex items-center justify-center relative overflow-hidden border border-[#F5F2EB]/15"
+            >
+              <!-- Imagem Real da pasta public/fotos/ -->
+              <img
+                src="/fotos/foto 10.jpg"
+                alt="Sinais vitais"
+                class="w-full h-full object-cover rounded-xl group-hover:scale-[1.03] transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-[#A65B43]/0 group-hover:bg-[#A65B43]/5 transition-all duration-300 pointer-events-none"
+              >
+              </div>
+            </div>
+          </div>
+          <p class="font-mono text-[10px] text-[#F5F2EB]/40 tracking-wider">
+            // BIOLOGIA: SINAIS_VITAIS
+          </p>
+        </div>
+
+        <!-- LADO DEV - FOTO 11: TV Clássica com Vídeo -->
+        <div class="js-anim-rectilinear space-y-4">
+          <!-- Estrutura da TV -->
+          <div
+            class="bg-[#3e2723] p-4 rounded-3xl border-4 border-[#1a0f0d] shadow-2xl relative group max-w-lg mx-auto transform transition-transform duration-300 lg:scale-[1.12] hover:scale-[1.02] lg:hover:scale-[1.16]"
+          >
+            <!-- Antenas no Topo da TV -->
+            <div
+              class="absolute -top-6 left-1/4 w-[2px] h-8 bg-zinc-500 origin-bottom transform -rotate-12 shadow-sm"
+            >
+            </div>
+            <div
+              class="absolute -top-8 left-1/3 w-[2px] h-10 bg-zinc-500 origin-bottom transform rotate-12 shadow-sm"
+            >
+            </div>
+
+            <!-- Tela da TV -->
+            <div
+              class="bg-black rounded-2xl p-2 border-2 border-[#2c1b18] relative overflow-hidden aspect-[4/3]"
+            >
+              <!-- Brilho do vidro CRT -->
+              <div
+                class="absolute inset-0 pointer-events-none z-10 bg-gradient-to-tr from-transparent via-white/5 to-white/10 rounded-xl"
+              >
+              </div>
+              <!-- Linhas de varredura CRT (scanlines) -->
+              <div
+                class="absolute inset-0 pointer-events-none z-10 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[size:100%_4px,6px_100%] rounded-xl"
+              >
+              </div>
+
+              <!-- Vídeo real -->
+              <video
+                src="/fotos/video 2.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                class="w-full h-full object-cover rounded-lg group-hover:scale-[1.02] transition-transform duration-500"
+              ></video>
+            </div>
+
+            <!-- Painel de Controles Inferior de TV Retrô -->
+            <div
+              class="mt-4 flex justify-between items-center px-2 text-[#F5F2EB]/60 font-mono text-[10px]"
+            >
+              <!-- Botões Giratórios Físicos -->
+              <div class="flex gap-3 items-center">
+                <!-- Botão 1 -->
+                <div
+                  class="w-6 h-6 rounded-full bg-[#1a0f0d] border border-[#5d4037] flex items-center justify-center relative shadow-inner"
+                >
+                  <div
+                    class="w-1 h-3 bg-[#A65B43] rounded-full transform -rotate-45"
+                  >
+                  </div>
+                </div>
+                <!-- Botão 2 -->
+                <div
+                  class="w-6 h-6 rounded-full bg-[#1a0f0d] border border-[#5d4037] flex items-center justify-center relative shadow-inner"
+                >
+                  <div
+                    class="w-1 h-3 bg-[#A65B43] rounded-full transform rotate-12"
+                  >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Grade de Som Alto-falante -->
+              <div class="flex flex-col gap-0.5 w-24 opacity-60">
+                <div class="h-0.5 bg-[#1a0f0d] w-full rounded-full"></div>
+                <div class="h-0.5 bg-[#1a0f0d] w-full rounded-full"></div>
+                <div class="h-0.5 bg-[#1a0f0d] w-full rounded-full"></div>
+                <div class="h-0.5 bg-[#1a0f0d] w-full rounded-full"></div>
+                <div class="h-0.5 bg-[#1a0f0d] w-full rounded-full"></div>
+              </div>
+
+              <!-- Luz indicadora de energia -->
+              <div
+                class="w-2 h-2 rounded-full bg-red-600 animate-pulse border border-red-900 shadow-[0_0_8px_#ef4444]"
+              >
+              </div>
+            </div>
+          </div>
+
+          <p
+            class="font-mono text-[10px] text-[#F5F2EB]/40 tracking-wider mt-6 lg:mt-10"
+          >
+            // LÓGICA: SINAL_VINTAGE_CONVERSOR
+          </p>
+        </div>
+
+        <!-- LADO VET - FOTO 12: Pulsação -->
+        <div class="js-anim-heartbeat-reveal space-y-4">
+          <div
+            class="bg-[#3B4D3C] p-4 pb-8 rounded-2xl shadow-2xl border border-[#F5F2EB]/15 transform -rotate-1 group"
+          >
+            <div
+              class="bg-[#F5F2EB]/5 aspect-[3/4] w-full rounded-xl flex items-center justify-center relative overflow-hidden border border-[#F5F2EB]/15"
+            >
+              <!-- Imagem Real da pasta public/fotos/ -->
+              <img
+                src="/fotos/foto 12.jpg"
+                alt="O sopro imperfeito"
+                class="w-full h-full object-cover rounded-xl group-hover:scale-[1.03] transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-[#A65B43]/0 group-hover:bg-[#A65B43]/5 transition-all duration-300 pointer-events-none"
+              >
+              </div>
+            </div>
+            <div
+              class="mt-4 text-center font-cursive text-xl text-[#F5F2EB]/70 flex items-center justify-center"
+            >
+              <!-- Ícone sutil de Folha ao lado do texto -->
+              <svg
+                viewBox="0 0 24 24"
+                class="w-4 h-4 fill-current text-[#A65B43] ml-2 opacity-80"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17,8C17,11 15,14 12,15 C9,14 7,11 7,8 C7,5 9,2 12,3 C15,2 17,5 17,8 Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <p class="font-mono text-[10px] text-[#F5F2EB]/40 tracking-wider">
+            // BIOLOGIA: ANATOMIA_AFETIVA
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FOOTER: Compilado com Sucesso -->
+  <footer
+    id="footer"
+    class="relative min-h-[90vh] flex flex-col justify-between items-center px-6 py-16 text-center bg-[#F5F2EB] border-t border-[#2C3E2B]/10"
+  >
+    <!-- Detalhe superior -->
+    <div
+      class="w-full max-w-7xl flex justify-between items-center text-[10px] font-mono text-[#2C3E2B]/40 tracking-wider"
+    >
+      <span>// BUILD_FINISH: CODE_SUCCESS</span>
+      <span>STATUS: EXECUTANDO PARA SEMPRE</span>
+    </div>
+
+    <!-- Mensagem Central de Assinatura -->
+    <div
+      class="z-10 max-w-3xl mx-auto my-auto py-12 flex flex-col items-center gap-8"
+    >
+      <!-- Selo de Compilação de Amor -->
+      <div
+        id="footer-stamp"
+        class="font-mono text-xs text-[#A65B43] border border-[#A65B43]/30 px-3 py-1 rounded-full uppercase tracking-[0.2em] js-anim-blur-reveal"
+      >
+        [ Build Compilado com Sucesso ]
+      </div>
+
+      <!-- Assinatura Poética Final -->
+      <h2
+        id="footer-message"
+        class="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-[#2C3E2B] leading-tight italic js-anim-blur-reveal"
+      >
+        Sem erros de execução, sem falhas na lógica. Nossa história flui
+        orgânica, gravada nesta infinita highway do tempo.
+      </h2>
+
+      <p
+        id="footer-date"
+        class="font-mono text-[10px] text-[#2C3E2B]/60 tracking-[0.3em] uppercase js-anim-blur-reveal"
+      >
+        DE 2026 ATE O INFINITO_LOOP
+      </p>
+    </div>
+  </footer>
+</Layout>
+
+<script>
+  // Importar o script de animações cliente
+  import "../scripts/main.js";
+</script>

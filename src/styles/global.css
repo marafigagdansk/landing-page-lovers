@@ -1,0 +1,119 @@
+/* -------------------------------------------------------------
+   Estilos Globais: Tema Vintage / Earthy (Tailwind CSS v4)
+   Aprimorado para a dualidade Lógica vs. Vida Orgânica
+   ------------------------------------------------------------- */
+
+@import "tailwindcss";
+
+/* Configuração de Tema do Tailwind CSS v4 */
+@theme {
+  --color-paper: #F5F2EB;
+  --color-moss: #2C3E2B;
+  --color-terra: #A65B43;
+  
+  --font-mono: "JetBrains Mono", monospace;
+  --font-serif: "Playfair Display", serif;
+  --font-cursive: "Caveat", cursive;
+}
+
+/* Reset de scroll suave */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #A65B43 #F5F2EB; /* Terracota e Papel antigo */
+}
+
+/* Customização da scrollbar do navegador */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F2EB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2C3E2B; /* moss-green */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A65B43; /* terracotta */
+}
+
+/* Prevenção de FOUC (Flash of Unstyled Content) para animações GSAP */
+.js-anim-reveal-letter,
+.js-anim-fade,
+.js-anim-stagger-left,
+.js-anim-stagger-right,
+.js-anim-ide-line,
+.js-anim-rectilinear,
+.js-anim-heartbeat-reveal,
+.js-anim-polaroid,
+.js-anim-blur-reveal {
+  opacity: 0;
+  will-change: transform, opacity, filter;
+}
+
+/* Textura sutil de papel granulado / ruído analógico */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Imagem em base64 com ruído cinza sutil */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Estrutura para efeito de revelação de texto (Word/Char Reveal) no Hero */
+.word-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.char-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.char-item {
+  display: inline-block;
+  transform: translateY(105%);
+  will-change: transform;
+}
+
+/* Textura de Madeira Realista via CSS (Mesa de Estúdio Analógica) para o Capítulo 3 */
+.bg-wood-studio {
+  background-color: #1a120b;
+  background-image: 
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0, 0, 0, 0.15) 40px, rgba(0, 0, 0, 0.15) 80px),
+    linear-gradient(to bottom, rgba(166, 91, 67, 0.08), rgba(0, 0, 0, 0.45));
+  position: relative;
+}
+
+/* Efeito de sombreamento de Polaroid Vintage */
+.polaroid-shadow {
+  box-shadow: 
+    0 10px 25px -5px rgba(26, 18, 11, 0.25),
+    0 8px 10px -6px rgba(26, 18, 11, 0.2),
+    0 0 40px rgba(0, 0, 0, 0.05) inset;
+}
+
+/* Elementos gráficos de IDE de Programação Vintage */
+.ide-vintage-border {
+  border-color: rgba(44, 62, 43, 0.15);
+}
+
+/* Desenhos orgânicos estilizados de folhas secas via SVG */
+.svg-leaf-path {
+  stroke: #2C3E2B;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}

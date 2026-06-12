@@ -1,0 +1,432 @@
+---
+// Importar o Layout base
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Nossa História - Linha do Tempo Romântica">
+  <main class="relative">
+    
+    <!-- HERO (Abertura) -->
+    <section id="hero" class="relative min-h-screen w-full flex flex-col justify-between items-center px-4 py-12 overflow-hidden bg-gradient-to-b from-zinc-950 to-zinc-900">
+      <!-- Luzes de fundo sutis (efeito de gradiente radial romântico) -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-rose-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="absolute bottom-10 left-1/4 w-[300px] h-[300px] bg-amber-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <!-- Espaçador superior para equilibrar o layout -->
+      <div></div>
+
+      <!-- Conteúdo Principal do Hero -->
+      <div class="text-center z-10 max-w-4xl mx-auto">
+        <p id="hero-subtitle" class="text-rose-400 font-medium tracking-[0.2em] uppercase text-xs sm:text-sm mb-6 opacity-0 translate-y-4">
+          Uma Jornada Através do Tempo
+        </p>
+        
+        <!-- Título principal que será animado letra por letra -->
+        <h1 id="hero-title" class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-tight text-zinc-50 tracking-tight">
+          Cada momento com você.
+        </h1>
+        
+        <p id="hero-lead" class="mt-8 text-zinc-400 font-light text-base sm:text-lg md:text-xl max-w-xl mx-auto leading-relaxed opacity-0 translate-y-4">
+          Uma retrospectiva visual do nosso começo, das nossas maiores aventuras e dos instantes que guardaremos para sempre.
+        </p>
+      </div>
+
+      <!-- Indicador de Scroll -->
+      <div id="hero-scroll-indicator" class="flex flex-col items-center gap-2 text-zinc-500 text-xs tracking-widest uppercase cursor-pointer transition-colors hover:text-rose-400 z-10 opacity-0 translate-y-4">
+        <span>Role para explorar</span>
+        <div class="w-6 h-10 border border-zinc-700 rounded-full flex justify-center p-1">
+          <div class="w-1.5 h-3 bg-rose-400 rounded-full animate-bounce"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CAPÍTULO 1 (O Começo) -->
+    <section id="capitulo1" class="relative py-24 md:py-36 px-4 max-w-7xl mx-auto border-t border-zinc-900/50">
+      <div class="absolute top-0 left-10 w-px h-full bg-gradient-to-b from-zinc-800 to-transparent pointer-events-none opacity-30"></div>
+      
+      <!-- Cabeçalho do Capítulo -->
+      <div class="mb-20 md:mb-32 relative z-10">
+        <span class="text-rose-400/80 font-cursive text-3xl md:text-4xl block mb-2">Capítulo 01</span>
+        <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl font-light text-zinc-50 tracking-tight">O Começo de Tudo</h2>
+        <p class="text-zinc-400 mt-4 max-w-lg font-light leading-relaxed">
+          Como os nossos caminhos se cruzaram e os primeiros passos que demos lado a lado. Pequenos gestos que se tornaram eternos.
+        </p>
+      </div>
+
+      <!-- Layout Misto (Grid Assimétrico) - 6 Fotos e 1 Vídeo -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+        
+        <!-- FOTO 01: Polaroid 1:1 (Lado esquerdo) -->
+        <div class="md:col-span-5 flex justify-center js-anim-stagger-left">
+          <!-- Estrutura do Polaroid -->
+          <div class="bg-zinc-900 p-4 pb-8 rounded-sm shadow-2xl border border-zinc-800/80 transform -rotate-2 hover:rotate-0 hover:scale-[1.03] transition-all duration-300 w-full max-w-sm group">
+            <!-- Placeholder da imagem. Substituir no futuro pela imagem real -->
+            <div class="bg-zinc-800 aspect-square w-full rounded-sm flex flex-col items-center justify-center border border-zinc-700/50 relative overflow-hidden">
+              <span class="text-zinc-500 font-mono text-sm tracking-wider group-hover:text-rose-400 transition-colors">FOTO 01 (1:1 Polaroid)</span>
+              <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+            </div>
+            <div class="mt-4 text-center font-cursive text-2xl text-zinc-400 group-hover:text-zinc-200 transition-colors">
+              O dia em que nos conhecemos...
+            </div>
+          </div>
+        </div>
+
+        <!-- FOTO 02: Proporção 4:3 (Lado direito - Acima) -->
+        <div class="md:col-span-7 js-anim-stagger-right">
+          <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800 shadow-xl hover:scale-[1.02] hover:border-zinc-700 transition-all duration-300 group">
+            <div class="bg-zinc-800 aspect-[4/3] w-full rounded-md flex items-center justify-center relative overflow-hidden">
+              <span class="text-zinc-500 font-mono text-sm tracking-wider group-hover:text-rose-400 transition-colors">FOTO 02 (Proporção 4:3)</span>
+              <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+            </div>
+            <p class="text-xs text-zinc-500 mt-2 text-right italic font-light">Legenda da foto 02 - Detalhe ou data especial</p>
+          </div>
+        </div>
+
+        <!-- VÍDEO 01: Background Loop ou Player Minimalista (Centralizado/Grande) -->
+        <div class="md:col-span-12 my-8 md:my-16 js-anim-scale-up">
+          <div class="bg-zinc-900 p-4 rounded-2xl border border-zinc-800 shadow-2xl relative group overflow-hidden max-w-5xl mx-auto">
+            <div class="bg-zinc-950 aspect-[16/9] w-full rounded-xl flex flex-col items-center justify-center border-2 border-dashed border-zinc-800 group-hover:border-rose-950 transition-all duration-500 relative overflow-hidden">
+              <!-- Simulação de Player de Vídeo -->
+              <div class="z-10 flex flex-col items-center gap-4">
+                <div class="w-16 h-16 rounded-full bg-zinc-900/90 border border-zinc-700 flex items-center justify-center text-rose-400 group-hover:scale-110 group-hover:bg-rose-500 group-hover:text-white transition-all duration-300 shadow-lg cursor-pointer">
+                  <!-- Ícone de Play -->
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fill-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                  </svg>
+                </div>
+                <span class="text-zinc-400 font-mono text-sm tracking-widest uppercase">VÍDEO 01 (16:9 - Player/Loop)</span>
+              </div>
+              <!-- Elemento decorativo simulando progresso do player -->
+              <div class="absolute bottom-0 left-0 w-full h-1.5 bg-zinc-800">
+                <div class="w-1/3 h-full bg-rose-500"></div>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
+            </div>
+            <div class="mt-4 flex justify-between items-center text-sm text-zinc-400 px-2">
+              <span>Nosso primeiro registro em movimento</span>
+              <span class="font-mono text-xs text-zinc-600">00:30</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOTO 03: Proporção 16:9 (Lado esquerdo) -->
+        <div class="md:col-span-7 js-anim-stagger-left">
+          <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800 shadow-xl hover:scale-[1.02] hover:border-zinc-700 transition-all duration-300 group">
+            <div class="bg-zinc-800 aspect-[16/9] w-full rounded-md flex items-center justify-center relative overflow-hidden">
+              <span class="text-zinc-500 font-mono text-sm tracking-wider group-hover:text-rose-400 transition-colors">FOTO 03 (Proporção 16:9)</span>
+              <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+            </div>
+            <p class="text-xs text-zinc-500 mt-2 italic font-light">Legenda da foto 03 - Nossa primeira viagem</p>
+          </div>
+        </div>
+
+        <!-- FOTO 04: Polaroid 1:1 (Lado direito) -->
+        <div class="md:col-span-5 flex justify-center js-anim-stagger-right">
+          <div class="bg-zinc-900 p-4 pb-8 rounded-sm shadow-2xl border border-zinc-800/80 transform rotate-3 hover:rotate-0 hover:scale-[1.03] transition-all duration-300 w-full max-w-sm group">
+            <div class="bg-zinc-800 aspect-square w-full rounded-sm flex flex-col items-center justify-center border border-zinc-700/50 relative overflow-hidden">
+              <span class="text-zinc-500 font-mono text-sm tracking-wider group-hover:text-rose-400 transition-colors">FOTO 04 (1:1 Polaroid)</span>
+              <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+            </div>
+            <div class="mt-4 text-center font-cursive text-2xl text-zinc-400 group-hover:text-zinc-200 transition-colors">
+              Aquele café inesquecível...
+            </div>
+          </div>
+        </div>
+
+        <!-- FOTO 05: Proporção 4:3 (Lado esquerdo) -->
+        <div class="md:col-span-6 js-anim-stagger-left">
+          <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800 shadow-xl hover:scale-[1.02] hover:border-zinc-700 transition-all duration-300 group">
+            <div class="bg-zinc-800 aspect-[4/3] w-full rounded-md flex items-center justify-center relative overflow-hidden">
+              <span class="text-zinc-500 font-mono text-sm tracking-wider group-hover:text-rose-400 transition-colors">FOTO 05 (Proporção 4:3)</span>
+              <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+            </div>
+            <p class="text-xs text-zinc-500 mt-2 italic font-light">Legenda da foto 05 - Dia de chuva e risadas</p>
+          </div>
+        </div>
+
+        <!-- FOTO 06: Proporção 16:9 (Lado direito) -->
+        <div class="md:col-span-6 js-anim-stagger-right">
+          <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800 shadow-xl hover:scale-[1.02] hover:border-zinc-700 transition-all duration-300 group">
+            <div class="bg-zinc-800 aspect-[16/9] w-full rounded-md flex items-center justify-center relative overflow-hidden">
+              <span class="text-zinc-500 font-mono text-sm tracking-wider group-hover:text-rose-400 transition-colors">FOTO 06 (Proporção 16:9)</span>
+              <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+            </div>
+            <p class="text-xs text-zinc-500 mt-2 text-right italic font-light">Legenda da foto 06 - Celebrando pequenas vitórias</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CAPÍTULO 2 (Nossas Aventuras) - Rolagem Horizontal -->
+    <section id="capitulo2-container" class="relative bg-zinc-900/30 overflow-hidden">
+      <!-- Seção wrapper que será "fixada" (pinned) pelo GSAP -->
+      <div id="capitulo2-pin" class="h-screen w-full flex flex-col justify-center relative">
+        
+        <!-- Linha do tempo decorativa no fundo -->
+        <div class="absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent -translate-y-1/2 pointer-events-none z-0"></div>
+        
+        <!-- Cabeçalho do Capítulo 2 -->
+        <div class="absolute top-12 left-4 md:left-24 z-20">
+          <span class="text-rose-400/80 font-cursive text-3xl md:text-4xl block mb-1">Capítulo 02</span>
+          <h2 class="font-serif text-3xl md:text-5xl font-light text-zinc-50 tracking-tight">Nossas Aventuras</h2>
+          <p class="text-zinc-400 mt-2 max-w-md text-sm md:text-base font-light">
+            Rolar a página nos leva por uma jornada horizontal, atravessando lugares e descobertas.
+          </p>
+        </div>
+
+        <!-- Container do Scroll Horizontal (Fotos 7 a 12) -->
+        <div id="horizontal-scroll" class="flex gap-12 items-center px-12 md:px-32 w-max h-full relative z-10 select-none">
+          
+          <!-- FOTO 07: Polaroid 1:1 -->
+          <div class="horizontal-item flex-shrink-0 w-[300px] md:w-[360px] transform -rotate-1 hover:rotate-0 hover:scale-[1.03] transition-all duration-300">
+            <div class="bg-zinc-900 p-4 pb-8 rounded-sm shadow-2xl border border-zinc-800/80 group">
+              <div class="bg-zinc-800 aspect-square w-full rounded-sm flex items-center justify-center relative overflow-hidden">
+                <span class="text-zinc-500 font-mono text-xs tracking-wider group-hover:text-rose-400 transition-colors">FOTO 07 (1:1 Polaroid)</span>
+                <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+              </div>
+              <div class="mt-4 text-center font-cursive text-2xl text-zinc-400 group-hover:text-zinc-200 transition-colors">
+                Pé na estrada! 🚗
+              </div>
+            </div>
+          </div>
+
+          <!-- FOTO 08: Proporção 4:3 -->
+          <div class="horizontal-item flex-shrink-0 w-[350px] md:w-[420px] hover:scale-[1.02] transition-all duration-300">
+            <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800 shadow-xl group">
+              <div class="bg-zinc-800 aspect-[4/3] w-full rounded-md flex items-center justify-center relative overflow-hidden">
+                <span class="text-zinc-500 font-mono text-xs tracking-wider group-hover:text-rose-400 transition-colors">FOTO 08 (Proporção 4:3)</span>
+                <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+              </div>
+              <p class="text-xs text-zinc-500 mt-2 italic font-light">Legenda da foto 08 - Aquela tarde na praia</p>
+            </div>
+          </div>
+
+          <!-- FOTO 09: Polaroid 1:1 -->
+          <div class="horizontal-item flex-shrink-0 w-[300px] md:w-[360px] transform rotate-3 hover:rotate-0 hover:scale-[1.03] transition-all duration-300">
+            <div class="bg-zinc-900 p-4 pb-8 rounded-sm shadow-2xl border border-zinc-800/80 group">
+              <div class="bg-zinc-800 aspect-square w-full rounded-sm flex items-center justify-center relative overflow-hidden">
+                <span class="text-zinc-500 font-mono text-xs tracking-wider group-hover:text-rose-400 transition-colors">FOTO 09 (1:1 Polaroid)</span>
+                <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+              </div>
+              <div class="mt-4 text-center font-cursive text-2xl text-zinc-400 group-hover:text-zinc-200 transition-colors">
+                Pôr do sol perfeito 🌅
+              </div>
+            </div>
+          </div>
+
+          <!-- FOTO 10: Proporção 16:9 -->
+          <div class="horizontal-item flex-shrink-0 w-[400px] md:w-[500px] hover:scale-[1.02] transition-all duration-300">
+            <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800 shadow-xl group">
+              <div class="bg-zinc-800 aspect-[16/9] w-full rounded-md flex items-center justify-center relative overflow-hidden">
+                <span class="text-zinc-500 font-mono text-xs tracking-wider group-hover:text-rose-400 transition-colors">FOTO 10 (Proporção 16:9)</span>
+                <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+              </div>
+              <p class="text-xs text-zinc-500 mt-2 italic font-light">Legenda da foto 10 - Acampando sob as estrelas</p>
+            </div>
+          </div>
+
+          <!-- FOTO 11: Polaroid 1:1 -->
+          <div class="horizontal-item flex-shrink-0 w-[300px] md:w-[360px] transform -rotate-2 hover:rotate-0 hover:scale-[1.03] transition-all duration-300">
+            <div class="bg-zinc-900 p-4 pb-8 rounded-sm shadow-2xl border border-zinc-800/80 group">
+              <div class="bg-zinc-800 aspect-square w-full rounded-sm flex items-center justify-center relative overflow-hidden">
+                <span class="text-zinc-500 font-mono text-xs tracking-wider group-hover:text-rose-400 transition-colors">FOTO 11 (1:1 Polaroid)</span>
+                <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+              </div>
+              <div class="mt-4 text-center font-cursive text-2xl text-zinc-400 group-hover:text-zinc-200 transition-colors">
+                Nossa primeira trilha juntos 🌲
+              </div>
+            </div>
+          </div>
+
+          <!-- FOTO 12: Proporção 4:3 -->
+          <div class="horizontal-item flex-shrink-0 w-[350px] md:w-[420px] hover:scale-[1.02] transition-all duration-300">
+            <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800 shadow-xl group">
+              <div class="bg-zinc-800 aspect-[4/3] w-full rounded-md flex items-center justify-center relative overflow-hidden">
+                <span class="text-zinc-500 font-mono text-xs tracking-wider group-hover:text-rose-400 transition-colors">FOTO 12 (Proporção 4:3)</span>
+                <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+              </div>
+              <p class="text-xs text-zinc-500 mt-2 italic font-light">Legenda da foto 12 - Jantar especial na serra</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Barra de progresso visual do Scroll Horizontal -->
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 w-64 h-1 bg-zinc-800 rounded-full overflow-hidden z-20">
+          <div id="horizontal-progress" class="h-full bg-rose-500 w-0"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CAPÍTULO 3 (Momentos Marcantes) - Overlap e Textos Flutuantes -->
+    <section id="capitulo3" class="relative py-24 md:py-36 px-4 max-w-7xl mx-auto overflow-hidden">
+      <div class="absolute bottom-0 right-10 w-px h-full bg-gradient-to-t from-zinc-800 to-transparent pointer-events-none opacity-30"></div>
+
+      <!-- Cabeçalho do Capítulo 3 -->
+      <div class="mb-24 md:mb-36 relative z-10 text-right">
+        <span class="text-rose-400/80 font-cursive text-3xl md:text-4xl block mb-2">Capítulo 03</span>
+        <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl font-light text-zinc-50 tracking-tight">Momentos Marcantes</h2>
+        <p class="text-zinc-400 mt-4 max-w-lg ml-auto font-light leading-relaxed">
+          Passagens profundas e sentimentos que se sedimentaram. Os marcos que definiram quem somos hoje.
+        </p>
+      </div>
+
+      <!-- Layout de Sobreposição (Overlap) - 6 Fotos e 1 Vídeo -->
+      <div class="flex flex-col gap-32 md:gap-48 relative">
+
+        <!-- Bloco de Overlap 1: FOTO 13 e Texto Flutuante -->
+        <div class="relative grid grid-cols-1 md:grid-cols-12 items-center gap-8 md:gap-0">
+          <!-- Mídia -->
+          <div class="md:col-span-8 z-0 js-anim-parallax-img hover:scale-[1.01] transition-all duration-300">
+            <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800 shadow-2xl group">
+              <div class="bg-zinc-800 aspect-[16/9] w-full rounded-md flex items-center justify-center relative overflow-hidden">
+                <span class="text-zinc-500 font-mono text-sm tracking-wider group-hover:text-rose-400 transition-colors">FOTO 13 (Proporção 16:9)</span>
+                <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Texto Flutuante Sobreposto -->
+          <div class="md:col-span-5 md:absolute md:right-0 bg-zinc-950/90 backdrop-blur-md p-8 md:p-12 rounded-xl border border-zinc-800/80 shadow-2xl z-10 md:text-right js-anim-parallax-text">
+            <span class="text-rose-400/80 font-cursive text-2xl block mb-2">O nosso aconchego</span>
+            <h3 class="font-serif text-2xl font-light text-zinc-100 mb-4">Construindo um Lar</h3>
+            <p class="text-zinc-400 text-sm font-light leading-relaxed">
+              Cada pequeno detalhe planejado juntos, cada risada na sala vazia. A nossa história ganhava um novo e precioso capítulo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bloco de Overlap 2: FOTO 14 e FOTO 15 -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
+          <!-- Foto 14: Polaroid 1:1 -->
+          <div class="md:col-span-5 flex justify-center js-anim-spring">
+            <div class="bg-zinc-900 p-4 pb-8 rounded-sm shadow-2xl border border-zinc-800/80 transform -rotate-3 hover:rotate-0 hover:scale-[1.03] transition-all duration-300 w-full max-w-sm group">
+              <div class="bg-zinc-800 aspect-square w-full rounded-sm flex items-center justify-center relative overflow-hidden">
+                <span class="text-zinc-500 font-mono text-sm tracking-wider group-hover:text-rose-400 transition-colors">FOTO 14 (1:1 Polaroid)</span>
+                <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+              </div>
+              <div class="mt-4 text-center font-cursive text-2xl text-zinc-400 group-hover:text-zinc-200 transition-colors">
+                Sorrisos espontâneos ✨
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto 15: Proporção 4:3 (Desalinhada verticalmente) -->
+          <div class="md:col-span-7 md:translate-y-12 js-anim-stagger-right">
+            <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800 shadow-xl hover:scale-[1.02] hover:border-zinc-700 transition-all duration-300 group">
+              <div class="bg-zinc-800 aspect-[4/3] w-full rounded-md flex items-center justify-center relative overflow-hidden">
+                <span class="text-zinc-500 font-mono text-sm tracking-wider group-hover:text-rose-400 transition-colors">FOTO 15 (Proporção 4:3)</span>
+                <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+              </div>
+              <p class="text-xs text-zinc-500 mt-2 italic font-light">Legenda da foto 15 - Um instante congelado no tempo</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloco de Overlap 3: VÍDEO 02 e Texto Flutuante -->
+        <div class="relative grid grid-cols-1 md:grid-cols-12 items-center gap-8 md:gap-0 mt-8">
+          <!-- Texto Flutuante Sobreposto - Lado Esquerdo -->
+          <div class="md:col-span-5 md:absolute md:left-0 bg-zinc-950/90 backdrop-blur-md p-8 md:p-12 rounded-xl border border-zinc-800/80 shadow-2xl z-10 js-anim-parallax-text">
+            <span class="text-rose-400/80 font-cursive text-2xl block mb-2">Nossas celebrações</span>
+            <h3 class="font-serif text-2xl font-light text-zinc-100 mb-4">Brindes e Conquistas</h3>
+            <p class="text-zinc-400 text-sm font-light leading-relaxed">
+              Dançando na cozinha, brindando a novos passos profissionais e apoiando um ao outro nos momentos mais desafiadores.
+            </p>
+          </div>
+          <!-- Vídeo 02 - Lado Direito -->
+          <div class="md:col-span-8 md:col-start-5 z-0 js-anim-parallax-img hover:scale-[1.01] transition-all duration-300">
+            <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800 shadow-2xl relative group">
+              <div class="bg-zinc-950 aspect-[16/9] w-full rounded-lg flex flex-col items-center justify-center border-2 border-dashed border-zinc-800 group-hover:border-rose-950 transition-all duration-500 relative overflow-hidden">
+                <div class="z-10 flex flex-col items-center gap-4">
+                  <div class="w-14 h-14 rounded-full bg-zinc-900/90 border border-zinc-700 flex items-center justify-center text-rose-400 group-hover:scale-110 group-hover:bg-rose-500 group-hover:text-white transition-all duration-300 shadow-lg cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 fill-current">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                    </svg>
+                  </div>
+                  <span class="text-zinc-400 font-mono text-xs tracking-widest uppercase">VÍDEO 02 (16:9 - Player/Loop)</span>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full h-1.5 bg-zinc-800">
+                  <div class="w-2/3 h-full bg-rose-500"></div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloco de Overlap 4: FOTO 16, FOTO 17 e FOTO 18 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <!-- Foto 16: Polaroid 1:1 -->
+          <div class="flex justify-center js-anim-spring">
+            <div class="bg-zinc-900 p-4 pb-8 rounded-sm shadow-2xl border border-zinc-800/80 transform rotate-1 hover:rotate-0 hover:scale-[1.03] transition-all duration-300 w-full max-w-sm group">
+              <div class="bg-zinc-800 aspect-square w-full rounded-sm flex items-center justify-center relative overflow-hidden">
+                <span class="text-zinc-500 font-mono text-sm tracking-wider group-hover:text-rose-400 transition-colors">FOTO 16 (1:1 Polaroid)</span>
+                <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+              </div>
+              <div class="mt-4 text-center font-cursive text-2xl text-zinc-400 group-hover:text-zinc-200 transition-colors">
+                Pequenos detalhes cotidianos ❤️
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto 17: Proporção 4:3 -->
+          <div class="js-anim-stagger-up">
+            <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800 shadow-xl hover:scale-[1.02] hover:border-zinc-700 transition-all duration-300 group">
+              <div class="bg-zinc-800 aspect-[4/3] w-full rounded-md flex items-center justify-center relative overflow-hidden">
+                <span class="text-zinc-500 font-mono text-sm tracking-wider group-hover:text-rose-400 transition-colors">FOTO 17 (Proporção 4:3)</span>
+                <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+              </div>
+              <p class="text-xs text-zinc-500 mt-2 italic font-light">Legenda da foto 17 - Sob a luz do luar</p>
+            </div>
+          </div>
+
+          <!-- Foto 18: Proporção 16:9 -->
+          <div class="js-anim-stagger-up md:translate-y-12">
+            <div class="bg-zinc-900 p-3 rounded-lg border border-zinc-800 shadow-xl hover:scale-[1.02] hover:border-zinc-700 transition-all duration-300 group">
+              <div class="bg-zinc-800 aspect-[16/9] w-full rounded-md flex items-center justify-center relative overflow-hidden">
+                <span class="text-zinc-500 font-mono text-sm tracking-wider group-hover:text-rose-400 transition-colors">FOTO 18 (Proporção 16:9)</span>
+                <div class="absolute inset-0 bg-rose-500/0 group-hover:bg-rose-500/5 transition-all duration-300 pointer-events-none"></div>
+              </div>
+              <p class="text-xs text-zinc-500 mt-2 italic font-light">Legenda da foto 18 - Nosso abraço mais quente</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FOOTER (O Encerramento) -->
+    <footer id="footer" class="relative min-h-[80vh] flex flex-col justify-center items-center px-4 py-24 text-center overflow-hidden bg-gradient-to-t from-zinc-950 via-zinc-900 to-zinc-950 border-t border-zinc-900/50">
+      <!-- Efeito de luz suave romântico no fundo -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-rose-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+      
+      <div class="z-10 max-w-2xl mx-auto flex flex-col items-center gap-8">
+        <!-- Coração pulsando suavemente -->
+        <div id="footer-heart" class="text-rose-500 opacity-0 scale-50">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+            <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+          </svg>
+        </div>
+
+        <!-- Mensagem final romântica -->
+        <h2 id="footer-message" class="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-zinc-100 leading-tight opacity-0 translate-y-6">
+          E a nossa história está apenas no começo. Te amo hoje e sempre.
+        </h2>
+        
+        <p id="footer-date" class="text-zinc-500 font-mono tracking-widest text-sm opacity-0 translate-y-6">
+          CRIADO EM 2026 &bull; PARA A ETERNIDADE
+        </p>
+      </div>
+    </footer>
+
+  </main>
+</Layout>
+
+<script>
+  // Importar o script de lógica cliente (executa no navegador)
+  import '../scripts/main.js';
+</script>
